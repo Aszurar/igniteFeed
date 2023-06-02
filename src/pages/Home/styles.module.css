@@ -1,0 +1,14 @@
+.containerum {
+  background-color: #e57373;
+  border-radius: 5px;
+  display: flex;
+  height: 100px;
+  width: 100px;
+}
+.containerdois {
+  /* display: flex; */
+  background-color: #4fc3f7;
+  border-radius: 5px;
+  height: 6.25rem;
+  width: 6.25rem;
+}
