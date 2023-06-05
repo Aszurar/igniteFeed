@@ -1,14 +1,15 @@
-.containerum {
-  background-color: #e57373;
-  border-radius: 5px;
-  display: flex;
-  height: 100px;
-  width: 100px;
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 2rem;
+
+  align-items: start;
 }
-.containerdois {
-  /* display: flex; */
+
+.squareBlue {
   background-color: #4fc3f7;
-  border-radius: 5px;
-  height: 6.25rem;
-  width: 6.25rem;
 }
