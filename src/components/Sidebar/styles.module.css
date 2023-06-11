@@ -33,9 +33,9 @@
   justify-content: center;
 }
 
-.profileImageContainer {
-  height: 60px;
-  width: 60px;
+.avatar {
+  height: 3.75rem;
+  width: 3.75rem;
 
   display: flex;
 
@@ -47,11 +47,12 @@
   border-radius: 8px;
 
   & > img {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     object-fit: cover;
-
     border-radius: 6px;
+
+    background-color: var(--gray-800);
   }
 }
 
@@ -60,22 +61,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  & > p {
-    font-size: 0.875rem;
-    color: var(--gray-500);
-  }
 }
 
-.separator {
-  height: 1px;
-  width: 100%;
-  background-color: var(--gray-700);
+.textContainer p {
+  font-size: 0.875rem;
+  color: var(--gray-500);
 }
 
 .sidebar footer {
   padding: 0 2rem;
   width: 100%;
+  color: var(--green-500);
 }
 
 .sidebar footer a {
@@ -88,13 +84,16 @@
 
   border: 1px solid var(--green-500);
   border-radius: 8px;
+
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: var(--green-500);
+    color: var(--gray-300);
+  }
 }
 
 .sidebar footer a img {
   width: 20px;
   height: 20px;
-}
-
-.sidebar footer a strong {
-  color: var(--green-500);
 }
