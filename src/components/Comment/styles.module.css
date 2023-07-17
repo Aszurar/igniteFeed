@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+.main {
+  background-color: var(--gray-700);
+  display: flex;
+  flex: 1;
+  padding: 1rem 1rem 1.5rem 1rem;
+  gap: 1rem;
+  border-radius: 9px;
+}
+
+.footer {
+  display: flex;
+  gap: 0.625rem;
+  color: var(--gray-400);
+  cursor: pointer;
+
+  & p{
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  transition: color 0.2s;
+}
+
+.footer:hover {
+  color: var(--green-500);
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+
+  & h4 {
+    font-size: 0.875rem;
+    & span {
+      color: var(--gray-400);
+    }
+  }
+
+  & p {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+}
+
+.main header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: var(--gray-400)
+}
+
+.main header button:hover {
+  color: var(--white);
+}
+
+.main header content {
+  display: flex;
+  flex: 1;
+
+  & p {
+    font-size: 0.875rem;
+    color: var(--gray-200);
+  }
+}
