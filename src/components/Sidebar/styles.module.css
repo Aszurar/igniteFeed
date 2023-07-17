@@ -33,28 +33,6 @@
   justify-content: center;
 }
 
-.avatar {
-  height: 3.75rem;
-  width: 3.75rem;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--gray-800);
-  border: 3px solid var(--green-500);
-  border-radius: 8px;
-
-  & > img {
-    width: 3.125rem;
-    height: 3.125rem;
-    object-fit: cover;
-    border-radius: 6px;
-
-    background-color: var(--gray-800);
-  }
-}
 
 .textContainer {
   display: flex;
@@ -65,7 +43,7 @@
 
 .textContainer p {
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: var(--gray-400);
 }
 
 .sidebar footer {
@@ -89,7 +67,7 @@
 
   &:hover {
     background-color: var(--green-500);
-    color: var(--gray-300);
+    color: var(--gray-200);
   }
 }
 
