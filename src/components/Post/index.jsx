@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import { Avatar } from '../avatar';
 import { Divisor } from '../Divisor';
+import { Comment } from '../Comment';
 export function Post({ author }) {
   return (
     <article className={styles.post}>
@@ -47,6 +48,12 @@ export function Post({ author }) {
         <textarea placeholder="Escreva um comentário..." />
         <button type="submit">Comentar</button>
       </form>
+      <Comment
+        time='1'
+        like={33}
+        name='Jenny Wilson'
+        content='Adorei seu novo portfolio!'
+        avatar='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80' />
     </article>
   );
 }
