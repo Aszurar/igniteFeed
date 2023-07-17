@@ -20,7 +20,7 @@
 }
 .post header time {
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: var(--gray-400);
 }
 .author {
   display: flex;
@@ -31,12 +31,12 @@
 }
 
 .authorInfo strong {
-  color: var(--gray-300);
+  color: var(--gray-200);
   line-height: 1.6rem;
 }
 
 .profileInfo p {
-  color: var(--gray-500);
+  color: var(--gray-400);
   font-size: 0.875rem;
   line-height: 1.6rem;
 }
@@ -47,7 +47,7 @@
   gap: 2rem;
   line-height: 1.6rem;
 
-  color: var(--gray-400);
+  color: var(--gray-300);
 }
 
 .link {
@@ -82,7 +82,7 @@
 }
 
 .commentForm h5 {
-  color: var(--gray-300);
+  color: var(--gray-200);
   line-height: 1.6rem;
 }
 
@@ -97,17 +97,13 @@
   outline: none;
   border: none;
 
-  color: var(--gray-400);
+  color: var(--gray-300);
   line-height: 1.4rem;
 
   &::placeholder {
-    color: var(--gray-600);
+    color: var(--gray-500);
   }
 }
-
-/* .commentForm footer {
-
-} */
 
 .commentForm button[type='submit'] {
   border: none;
