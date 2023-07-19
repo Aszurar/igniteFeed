@@ -143,3 +143,9 @@
   visibility: visible;
   max-height: 3rem;
 }
+
+.commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
