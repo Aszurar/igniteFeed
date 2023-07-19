@@ -4,40 +4,61 @@
   gap: 1rem;
 }
 
-.body {
+.commentBox {
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: 1rem;
 }
+
 .main {
   background-color: var(--gray-700);
   display: flex;
   flex: 1;
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1rem;
   gap: 1rem;
   border-radius: 9px;
 }
 
 .footer {
   display: flex;
-  gap: 0.625rem;
-  color: var(--gray-400);
-  cursor: pointer;
+  
+  & button {
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    
+    border: none;
 
-  & p{
+    display: flex;
+    align-items: center;
+
+    gap: 0.625rem;
+    cursor: pointer;
+
+
+    color: var(--gray-400);
     font-size: 0.875rem;
     font-weight: 700;
+
+    transition: color 0.2s;
   }
 
-  transition: color 0.2s;
 }
 
-.footer:hover {
+.footer button:hover {
   color: var(--green-500);
 }
 
-.author {
+
+.main header {
+  display: flex;
+  flex: 1;
+  align-items: flex-starts;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.authorAndTime {
   display: flex;
   flex-direction: column;
 
@@ -48,7 +69,7 @@
     }
   }
 
-  & p {
+  & time {
     font-size: 0.75rem;
     color: var(--gray-400);
   }
@@ -56,10 +77,13 @@
 
 .main header button {
   background-color: transparent;
-  border: none;
+  border: 0;
   cursor: pointer;
   transition: color 0.2s;
-  color: var(--gray-400)
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
 }
 
 .main header button:hover {

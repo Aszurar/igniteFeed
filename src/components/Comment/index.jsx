@@ -7,26 +7,33 @@ export function Comment({ avatar, name, time, like, content }) {
   return (
     <div className={styles.container}>
       <Avatar urlImage={avatar} />
-      <div className={styles.body}>
+      <div className={styles.commentBox}>
         <main className={styles.main}>
+
           <header>
             <div className={styles.author}>
               <h4>{name}<span> (você)</span></h4>
-              <p>Cerca de {time}h</p>
+              <time title="11 de Maio às 8:13h" dateTime="2022-05-11:08:13:30">
+                Cerca de {time}h atrás
+              </time>
             </div>
             <button type='button'>
               <Trash size={24} />
             </button>
           </header>
+
+
           <content>
             <p>{content}</p>
           </content>
         </main>
 
         <footer className={styles.footer}>
-          <a href="#"><ThumbsUp size={20} /></a>
+          <button type='button'>
+            <ThumbsUp size={20} />
+            <p>Aplaudir <span>{like}</span></p>
+          </button>
 
-          <p>Aplaudir • {like}</p>
         </footer>
       </div>
     </div>
