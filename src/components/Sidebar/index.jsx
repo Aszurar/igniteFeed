@@ -1,7 +1,7 @@
 import { PencilSimpleLine } from 'phosphor-react';
 
 import styles from './styles.module.css';
-import { Avatar } from '../avatar';
+import { Avatar } from '../Avatar';
 import { Divisor } from '../Divisor';
 
 export function Sidebar() {

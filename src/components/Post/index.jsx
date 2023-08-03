@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import styles from './styles.module.css';
-import { Avatar } from '../avatar';
+import { Avatar } from '../Avatar';
 import { Divisor } from '../Divisor';
 import { Comment } from '../Comment';
 export function Post({ author }) {

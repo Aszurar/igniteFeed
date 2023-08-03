@@ -1,12 +1,12 @@
-import { Avatar } from '../avatar'
 import PropTypes from 'prop-types';
 import { Trash, ThumbsUp } from "phosphor-react";
 import styles from './styles.module.css';
+import { Avatar } from '../Avatar';
 
 export function Comment({ avatar, name, time, like, content }) {
   return (
     <div className={styles.container}>
-      <Avatar urlImage={avatar} />
+      <Avatar urlImage={avatar} hasBorder={false} />
       <div className={styles.commentBox}>
         <main className={styles.main}>
 
@@ -31,7 +31,7 @@ export function Comment({ avatar, name, time, like, content }) {
         <footer className={styles.footer}>
           <button type='button'>
             <ThumbsUp size={20} />
-            <p>Aplaudir <span>{like}</span></p>
+            <p>Aplaudir<span>{like}</span></p>
           </button>
 
         </footer>
