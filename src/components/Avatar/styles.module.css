@@ -8,11 +8,24 @@
   align-items: center;
 
   background-color: var(--gray-800);
+  border-radius: 8px;
+}
+
+.avatarWithBorder {
+  height: 3.75rem;
+  width: 3.75rem;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--gray-800);
   border: 3px solid var(--green-500);
   border-radius: 8px;
 }
 
-.avatar img {
+ img {
   width: 3.125rem;
   height: 3.125rem;
   object-fit: cover;
