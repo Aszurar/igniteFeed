@@ -8,6 +8,19 @@
   gap: 2rem;
 
   align-items: start;
+
+   @media (max-width: 820px) {  /*or 768px */
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 480px) {
+    html {
+      /* 16px => 100% */
+      /* 14px =>   x */
+      /* 16x = 1400 => x =  87.7% */
+        font-size: 87.5%;
+    }
+  }
 }
 
 .squareBlue {
