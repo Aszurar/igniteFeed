@@ -47,6 +47,16 @@ button {
   font-size: 1rem;
 }
 
+@media (max-width: 480px) {
+  html {
+    /* 16px => 100% */
+    /* 14px =>   x */
+    /* 16x = 1400 => x =  87.7% */
+      font-size: 87.5%;
+  }
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
