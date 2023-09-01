@@ -17,25 +17,17 @@ export function Post({ author, publishedAt, content }) {
   ]);
   const [newComment, setNewComment] = useState('');
 
-  const contentList = content.map((line, index) => {
+  const contentList = content.map((line) => {
     if (line.type === 'paragraph') {
-      return <p key={index}>{line.string}</p>
+      return <p key={line.string}>{line.string}</p>
     }
     if (line.type === 'link') {
-      return <p key={index} className={styles.link}><a href="#">{line.string}</a></p>
+      return <p key={line.string} className={styles.link}><a href="#">{line.string}</a></p>
     }
-  });
-  const commentsList = comments.map((comment, index) => {
-    return <Comment
-      key={index}
-      like={33}
-      content={comment}
-      name='Jenny Wilson'
-      avatar='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80'
-    />
   });
 
   function handleUpdateNewComment(event) {
+    event.target.setCustomValidity("")
     setNewComment(event.target.value);
   }
 
@@ -49,6 +41,32 @@ export function Post({ author, publishedAt, content }) {
     setComments([...comments, newComment]);
     setNewComment('');
   }
+
+  function handleNewCommentInvalid(event) {
+    event.target.setCustomValidity("Esse campo é obrigatório")
+  }
+
+  function handleDeleteComment(currentIndex) {
+    if (currentIndex >= 0 && currentIndex <= comments.length) {
+      const commentsWithoutDeletedOne = comments.filter((comment, index) => index !== currentIndex);
+      setComments(commentsWithoutDeletedOne);
+    }
+  }
+
+  const commentsList = comments.map((comment, index) => {
+    return <Comment
+      key={comment}
+      like={33}
+      content={comment}
+      time="10"
+      name='Jenny Wilson'
+      avatar='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80'
+      onDeleteComment={() => handleDeleteComment(index)}
+    />
+  });
+
+
+  const isNewCommentEmpty = newComment.trim().length === 0;
 
   return (
     <article className={styles.post}>
@@ -78,8 +96,14 @@ export function Post({ author, publishedAt, content }) {
           placeholder="Escreva um comentário..."
           value={newComment}
           onChange={handleUpdateNewComment}
+          required
+          onInvalid={handleNewCommentInvalid}
         />
-        <button type="submit">Comentar</button>
+        <footer>
+          <button type="submit"
+            disabled={isNewCommentEmpty}
+          >Comentar</button>
+        </footer>
       </form>
 
       <div className={styles.commentList}>
