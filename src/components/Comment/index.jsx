@@ -3,7 +3,7 @@ import { Trash, ThumbsUp } from "phosphor-react";
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';
 
-export function Comment({ avatar, name, time, like, content }) {
+export function Comment({ avatar, name, time, like, content, onDeleteComment }) {
   return (
     <div className={styles.container}>
       <Avatar urlImage={avatar} hasBorder={false} />
@@ -17,15 +17,13 @@ export function Comment({ avatar, name, time, like, content }) {
                 Cerca de {time}h atrás
               </time>
             </div>
-            <button type='button'>
+            <button type='button' onClick={onDeleteComment}>
               <Trash size={24} />
             </button>
           </header>
 
 
-          <content>
-            <p>{content}</p>
-          </content>
+          <p>{content}</p>
         </main>
 
         <footer className={styles.footer}>
@@ -46,5 +44,6 @@ Comment.propTypes = {
   time: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   like: PropTypes.number.isRequired,
+  onDeleteComment: PropTypes.func.isRequired,
 };
 
