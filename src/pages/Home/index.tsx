@@ -53,13 +53,11 @@ export function Home() {
   )
 
   return (
-    <div>
-      <div className={styles.container}>
-        <Sidebar />
-        <main>
-          {postsList}
-        </main>
+    <main className={styles.container}>
+      <Sidebar />
+      <div>
+        {postsList}
       </div>
-    </div>
+    </main>
   );
 }

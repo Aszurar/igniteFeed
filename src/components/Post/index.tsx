@@ -1,13 +1,30 @@
-import PropTypes from 'prop-types';
-
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';
 import { Divisor } from '../Divisor';
 import { Comment } from '../Comment';
 import { format, formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { useState } from 'react';
-export function Post({ author, publishedAt, content }) {
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
+
+type AuthorProps = {
+  avatarUrl: string;
+  name: string;
+  role: string;
+}
+
+type ContentProps = {
+  type: string;
+  string: string;
+}
+
+type PostProps = {
+  author: AuthorProps;
+  content: ContentProps[];
+  publishedAt: Date;
+}
+
+
+export function Post({ author, content, publishedAt }: PostProps) {
   const publishedDateToISO = publishedAt.toISOString();
   const publishedDateFormatted = format(publishedAt, "dd 'de' MMMM 'às' HH:mm'h'", { locale: ptBR });
   const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, { locale: ptBR, addSuffix: true });
@@ -26,12 +43,12 @@ export function Post({ author, publishedAt, content }) {
     }
   });
 
-  function handleUpdateNewComment(event) {
+  function handleUpdateNewComment(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("")
     setNewComment(event.target.value);
   }
 
-  function handleAddNewComment(event) {
+  function handleAddNewComment(event: FormEvent) {
     event.preventDefault();
 
     if (newComment.trim() === '') {
@@ -42,11 +59,11 @@ export function Post({ author, publishedAt, content }) {
     setNewComment('');
   }
 
-  function handleNewCommentInvalid(event) {
+  function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("Esse campo é obrigatório")
   }
 
-  function handleDeleteComment(currentIndex) {
+  function handleDeleteComment(currentIndex: number) {
     if (currentIndex >= 0 && currentIndex <= comments.length) {
       const commentsWithoutDeletedOne = comments.filter((comment, index) => index !== currentIndex);
       setComments(commentsWithoutDeletedOne);
@@ -56,11 +73,11 @@ export function Post({ author, publishedAt, content }) {
   const commentsList = comments.map((comment, index) => {
     return <Comment
       key={comment}
-      like={33}
+      like={0}
       content={comment}
       time="10"
-      name='Jenny Wilson'
-      avatar='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80'
+      name='Leslie Alexander'
+      avatar='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80'
       onDeleteComment={() => handleDeleteComment(index)}
     />
   });
@@ -72,7 +89,7 @@ export function Post({ author, publishedAt, content }) {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <Avatar urlImage={author.avatarUrl} />
+          <Avatar urlImage={author.avatarUrl} alt="Foto de perfil" />
 
           <div className={styles.authorInfo}>
             <strong>{author.name}</strong>
@@ -112,9 +129,3 @@ export function Post({ author, publishedAt, content }) {
     </article>
   );
 }
-
-Post.propTypes = {
-  author: PropTypes.object.isRequired,
-  publishedAt: PropTypes.instanceOf(Date).isRequired,
-  content: PropTypes.array.isRequired,
-};

@@ -1,12 +1,32 @@
-import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Trash, ThumbsUp } from "phosphor-react";
+
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';
 
-export function Comment({ avatar, name, time, like, content, onDeleteComment }) {
+
+type CommentProps = {
+  name: string;
+  time: string;
+  like: number;
+  avatar: string;
+  content: string;
+  onDeleteComment: () => void;
+}
+
+export function Comment({ name, time, like, avatar, content, onDeleteComment
+}: CommentProps) {
+  const [likes, setLikes] = useState(like);
+
+  function handleAddLike() {
+    setLikes((prevState) => {
+      return prevState + 1
+    })
+  }
+
   return (
     <div className={styles.container}>
-      <Avatar urlImage={avatar} hasBorder={false} />
+      <Avatar urlImage={avatar} hasBorder={false} alt="Foto de perfil" />
       <div className={styles.commentBox}>
         <main className={styles.main}>
 
@@ -22,28 +42,16 @@ export function Comment({ avatar, name, time, like, content, onDeleteComment }) 
             </button>
           </header>
 
-
           <p>{content}</p>
         </main>
 
         <footer className={styles.footer}>
-          <button type='button'>
-            <ThumbsUp size={20} />
-            <p>Aplaudir<span>{like}</span></p>
+          <button type='button' onClick={() => handleAddLike()}>
+            <ThumbsUp size={20} aria-label="Curtir" />
+            <p>Aplaudir<span>{likes}</span></p>
           </button>
-
         </footer>
       </div>
     </div>
   )
 }
-
-Comment.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  like: PropTypes.number.isRequired,
-  onDeleteComment: PropTypes.func.isRequired,
-};
-
