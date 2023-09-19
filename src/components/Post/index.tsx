@@ -108,7 +108,7 @@ export function Post({ author, content, publishedAt }: PostProps) {
       <Divisor />
 
       <form className={styles.commentForm} onSubmit={handleAddNewComment}>
-        <h5>Deixe seu feedback</h5>
+        <h2>Deixe seu feedback</h2>
         <textarea
           placeholder="Escreva um comentário..."
           value={newComment}

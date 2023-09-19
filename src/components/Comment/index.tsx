@@ -31,13 +31,13 @@ export function Comment({ name, time, like, avatar, content, onDeleteComment
         <main className={styles.main}>
 
           <header>
-            <div className={styles.author}>
-              <h4>{name}<span> (você)</span></h4>
+            <div className={styles.authorAndTime}>
+              <h3>{name}<span> (você)</span></h3>
               <time title="11 de Maio às 8:13h" dateTime="2022-05-11:08:13:30">
                 Cerca de {time}h atrás
               </time>
             </div>
-            <button type='button' onClick={onDeleteComment}>
+            <button type='button' aria-label="Deletar comentário" onClick={onDeleteComment}>
               <Trash size={24} />
             </button>
           </header>

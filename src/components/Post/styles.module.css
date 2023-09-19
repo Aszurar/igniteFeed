@@ -94,7 +94,8 @@
   max-height: 0;
 }
 
-.commentForm h5 {
+.commentForm h2 {
+  font-size: 1rem;
   color: var(--gray-200);
   line-height: 1.6rem;
 }
