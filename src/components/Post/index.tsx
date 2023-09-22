@@ -65,7 +65,7 @@ export function Post({ author, content, publishedAt }: PostProps) {
 
   function handleDeleteComment(currentIndex: number) {
     if (currentIndex >= 0 && currentIndex <= comments.length) {
-      const commentsWithoutDeletedOne = comments.filter((comment, index) => index !== currentIndex);
+      const commentsWithoutDeletedOne = comments.filter((_, index) => index !== currentIndex);
       setComments(commentsWithoutDeletedOne);
     }
   }
@@ -101,9 +101,9 @@ export function Post({ author, content, publishedAt }: PostProps) {
         </time>
       </header>
 
-      <main>
+      <section>
         {contentList}
-      </main>
+      </section>
 
       <Divisor />
 

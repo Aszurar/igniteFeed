@@ -48,7 +48,7 @@
   line-height: 1.6rem;
 }
 
-.post main {
+.post section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
