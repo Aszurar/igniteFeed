@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.4",
     "@sentry/react": "^7.70.0",
     "date-fns": "^2.30.0",
     "phosphor-react": "^1.4.1",

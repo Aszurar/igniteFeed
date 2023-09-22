@@ -3,6 +3,7 @@ import { Trash, ThumbsUp } from "phosphor-react";
 
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';
+import * as Dialog from '@radix-ui/react-dialog';
 
 
 type CommentProps = {
@@ -37,9 +38,27 @@ export function Comment({ name, time, like, avatar, content, onDeleteComment
                 Cerca de {time}h atrás
               </time>
             </div>
-            <button type='button' aria-label="Deletar comentário" onClick={onDeleteComment}>
-              <Trash size={24} />
-            </button>
+
+            <Dialog.Root>
+              <Dialog.Trigger className={styles.deleteButton} >
+                <Trash aria-label="Deletar comentário" size={24} />
+              </Dialog.Trigger>
+
+              <Dialog.Portal>
+                <Dialog.Overlay className={styles.overlay} />
+                <Dialog.Content className={styles.modal}>
+                  <Dialog.Title className={styles.titleModal}>Excluir comentário</Dialog.Title>
+                  <Dialog.Description>Você tem certeza que gostaria de excluir este comentário?</Dialog.Description>
+                  <footer>
+                    <Dialog.Close aria-label='Cancelar' className={styles.cancelButton} >Cancelar</Dialog.Close>
+                    <Dialog.Close className={styles.confirmButton} onClick={onDeleteComment}>Sim, excluir</Dialog.Close>
+                  </footer>
+                </Dialog.Content>
+              </Dialog.Portal>
+            </Dialog.Root>
+
+
+
           </header>
 
           <p>{content}</p>

@@ -11,6 +11,8 @@
   --gray-300: #c4c4cc;
   --gray-200: #e1e1e6;
 
+  --gray-transparent: rgba(0, 0, 0, 0.75);
+
   --white: #ffffff;
 
   --red-500: #f75a68;

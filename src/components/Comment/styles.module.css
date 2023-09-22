@@ -75,6 +75,7 @@
 .main header {
   display: flex;
   flex: 1;
+  flex-direction: row;
   align-items: flex-starts;
   justify-content: space-between;
   gap: 1rem;
@@ -97,7 +98,7 @@
   }
 }
 
-.main header button {
+.deleteButton {
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -108,7 +109,7 @@
   border-radius: 2px;
 }
 
-.main header button:hover {
+.deleteButton:hover {
   color: var(--white);
 }
 
@@ -116,3 +117,75 @@
     font-size: 0.875rem;
     color: var(--gray-200);
 }
+
+.overlay {
+  background-color: var(--gray-transparent);
+  position: fixed;
+  inset: 0;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+
+  width: 27rem;
+  /* max-height: fit-content; */
+  margin: 0 auto;
+
+  border-radius: 8px;
+  background-color: var(--gray-800);
+  color: var(--gray-300);
+
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.titleModal {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-200);
+}
+
+.modal p {
+  text-align: center;
+  max-width: 16rem;
+  color: var(--gray-300);
+}
+
+.modal footer {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.modal footer button {
+  background: transparent;
+  border: none;
+
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+}
+
+.modal footer button:hover {
+  background-color: var(--gray-700);
+}
+
+.cancelButton {
+  color: var(--gray-200);
+}
+.confirmButton {
+  color: var(--red-500);
+}
+
