@@ -28,7 +28,7 @@ export function Comment({ name, time, like, avatar, content, onDeleteComment
     <div className={styles.container}>
       <Avatar urlImage={avatar} hasBorder={false} alt="Foto de perfil" />
       <div className={styles.commentBox}>
-        <main className={styles.main}>
+        <section className={styles.main}>
 
           <header>
             <div className={styles.authorAndTime}>
@@ -43,7 +43,7 @@ export function Comment({ name, time, like, avatar, content, onDeleteComment
           </header>
 
           <p>{content}</p>
-        </main>
+        </section>
 
         <footer className={styles.footer}>
           <button type='button' onClick={() => handleAddLike()}>
