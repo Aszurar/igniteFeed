@@ -9,12 +9,17 @@
 - O site foi publicado com CI/CD por meio da plataforma [Netlify](https://www.netlify.com/). 
 - Acesse em: https://ignitefeed-aszurar.netlify.app
 
+
 <div display="flex">
   <div align="center">
     <h3><a href="https://ignitefeed-aszurar.netlify.app">Ignite Feed</a></h3>
   </div>
 </div>
 
+<div >
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4299df7d-5adb-4416-93a6-8a0fe7c49d2b/deploy-status)](https://app.netlify.com/sites/ignitefeed-aszurar/deploys) [![React](https://img.shields.io/badge/-React-black?style=flat&logo=react&link=https://react.dev)](https://react.dev/) [![Vite](https://img.shields.io/badge/-Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white&link=https://vitejs.dev/)](https://vitejs.dev/) [![TypeScript](https://img.shields.io/badge/-Typescript-%23007ACC?style=?style=flat-square&logo=typescript&logoColor=white&link=https://www.typescriptlang.org/)](https://www.typescriptlang.org/) [![JavaScript](https://img.shields.io/badge/-JavaScript-%23323330.svg?style=flat&logo=javascript&link=https://www.javascript.com/)](https://www.javascript.com/) [![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white&link=https://developer.mozilla.org/pt-BR/docs/Web/HTML)](https://developer.mozilla.org/pt-BR/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&link=https://www.w3schools.com/css/)](https://www.w3schools.com/css/) [![Yarn](https://img.shields.io/badge/-yarn-%232C8EBB?style=flat&logo=yarn&logoColor=white&link=https://yarnpkg.com/)](https://yarnpkg.com/) 
+</div>
 ---
 
 <div>
@@ -32,9 +37,36 @@
 
 ---
 
+<div align="center" >
+    <img src="https://i.imgur.com/OInNBjH.gif" width="500">
+</div>
+
+- [**Link do vídeo completo sobre o projeto**](https://youtube.com/)
+
+---
+
+## :information_source: Sobre
+
+- A ideia dessa aplicação é poder listar posts de um blog de forma simples, sem muitas funcionalidades, apenas para praticar os conceitos básicos de React, Vite e TypeScript.
+- É o 1º projeto do bootcamp **Ignite da trilha React Native 2022 da [Rocketseat](https://www.rocketseat.com.br/)**
+- Para a construção da interface desse projeto foi usado **[React](https://react.dev)** com **[TypeScript](https://www.typescriptlang.org/)**.
+- A estilização é feita com CSS comum sem nenhuma lib por meio do [CSS modules](https://github.com/css-modules/css-modules) já que a ideia é entender o básico do React em desenvolvimento web.
+
+1. **Realizando Comentário**
+   <div align="center" >
+      <img src="https://i.imgur.com/WnkvFdF.gif" width="500">
+   </div>
+  <div align="center" >
+      <img src="https://i.imgur.com/ffb70LP.png" width="490">_<img src="https://i.imgur.com/GyYfHLt.png" width="490">
+   </div>
+
+---
+
+## :interrobang: Motivo
+
+
 # React + TypeScript + Vite
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4299df7d-5adb-4416-93a6-8a0fe7c49d2b/deploy-status)](https://app.netlify.com/sites/ignitefeed-aszurar/deploys)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
