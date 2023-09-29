@@ -14,12 +14,12 @@ export function LinkButton({ icon: Icon, link, label }: LinkButtonProps) {
     <Tooltip.Provider>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
-          <a href={link} target='_blank' className={styles.link}>
+          <a href={link} target='_blank' className={styles.link} aria-label={label}>
             <Icon size={26} weight='bold' />
           </a>
         </Tooltip.Trigger>
         <Tooltip.Portal>
-          <Tooltip.Content sideOffset={5} className={styles.tooltipContent}>
+          <Tooltip.Content sideOffset={5} className={styles.tooltipContent} aria-label=".">
             {label}
             <Tooltip.Arrow className={styles.tooltipArrow} />
           </Tooltip.Content>
