@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Trash, ThumbsUp } from "phosphor-react";
+import { Trash, ThumbsUp } from "@phosphor-icons/react";
 
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';

@@ -1,4 +1,4 @@
-import { PencilSimpleLine } from 'phosphor-react';
+import { PencilSimpleLine } from '@phosphor-icons/react';
 
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';
