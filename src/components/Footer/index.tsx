@@ -10,7 +10,6 @@ export function Footer() {
         <LinkButton icon={GithubLogo} label="Acessar Github" link='https://github.com/Aszurar/igniteFeed' />
         <LinkButton icon={LinkedinLogo} label="Acessar Linkedin" link='https://www.linkedin.com/in/lucas-de-lima-azsura/' />
       </div>
-
     </footer>
   )
 }
