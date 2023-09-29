@@ -1,0 +1,32 @@
+.footer {
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  background-color: var(--gray-800);
+
+  padding: 1rem 1rem;
+}
+
+.footer strong {
+  line-height: 1.5rem;
+  color: var(--green-700);
+}
+
+.footer strong svg {
+  color: var(--green-500);
+}
+
+.footer strong span{
+  color: var(--gray-200);
+  font-weight: 400;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}

@@ -4,6 +4,7 @@ import * as Sentry from "@sentry/react";
 
 import './theme/global.css';
 import { axeAccessibilityReporter } from './utils/axeAccessibilityReporter';
+import { Footer } from './components/Footer';
 
 axeAccessibilityReporter()
 
@@ -24,6 +25,7 @@ function App() {
     <>
       <Header />
       <Home />
+      <Footer />
     </>
   );
 }
