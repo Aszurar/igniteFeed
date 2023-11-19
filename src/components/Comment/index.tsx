@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Trash, ThumbsUp } from "@phosphor-icons/react";
-
-import styles from './styles.module.css';
-import { Avatar } from '../Avatar';
 import * as Dialog from '@radix-ui/react-dialog';
+
+import { Avatar } from '../Avatar';
+import styles from './styles.module.css';
 
 
 type CommentProps = {
@@ -15,14 +15,20 @@ type CommentProps = {
   onDeleteComment: () => void;
 }
 
-export function Comment({ name, time, like, avatar, content, onDeleteComment
-}: CommentProps) {
+export function Comment({
+  name,
+  time,
+  like,
+  avatar,
+  content,
+  onDeleteComment
+}: Readonly<CommentProps>) {
   const [likes, setLikes] = useState(like);
 
   function handleAddLike() {
     setLikes((prevState) => {
-      return prevState + 1
-    })
+      return prevState + 1;
+    });
   }
 
   return (
