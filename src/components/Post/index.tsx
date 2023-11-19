@@ -1,3 +1,5 @@
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
 import styles from './styles.module.css';
 import { Avatar } from '../Avatar';
 import { Divisor } from '../Divisor';
@@ -25,6 +27,8 @@ type PostProps = {
 
 
 export function Post({ author, content, publishedAt }: PostProps) {
+  const [parent] = useAutoAnimate()
+
   const publishedDateToISO = publishedAt.toISOString();
   const publishedDateFormatted = format(publishedAt, "dd 'de' MMMM 'às' HH:mm'h'", { locale: ptBR });
   const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, { locale: ptBR, addSuffix: true });
@@ -116,14 +120,14 @@ export function Post({ author, content, publishedAt }: PostProps) {
           required
           onInvalid={handleNewCommentInvalid}
         />
-        <footer>
+        <footer >
           <button type="submit"
             disabled={isNewCommentEmpty}
           >Comentar</button>
         </footer>
       </form>
 
-      <div className={styles.commentList}>
+      <div ref={parent} className={styles.commentList}>
         {commentsList}
       </div>
     </article>
