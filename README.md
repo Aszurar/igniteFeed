@@ -43,7 +43,7 @@
 
 <div align="center" >
 
-- [**Link do vídeo completo sobre o projeto**](https://www.youtube.com/watch?v=8ehNeoepYNE)
+**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=8ehNeoepYNE)**
 
 </div>
 
