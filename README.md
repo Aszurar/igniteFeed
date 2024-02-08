@@ -85,7 +85,7 @@
       <img src="https://i.imgur.com/dJxA4lh.gif" width="500">
   </div>
   <div align="center" >
-      <img src="https://i.imgur.com/GyYfHLt.png" width="350">_<img src="https://i.imgur.com/AbfdLfI.png" width="350">
+      <img src="https://i.imgur.com/GyYfHLt.png" width="350">_<img src="https://i.imgur.com/3VSx0pu.png" width="350">
   </div>
 
 ---
@@ -116,7 +116,7 @@
       <img src="https://i.imgur.com/WwlRNX1.gif" width="500">
   </div>
   <div align="center" >
-      <img src="https://i.imgur.com/GyYfHLt.png" width="350">_<img src="https://i.imgur.com/O2uKIQ1.png" width="350">
+      <img src="https://i.imgur.com/GyYfHLt.png" width="350">_<img src="https://i.imgur.com/AbfdLfI.png" width="350">
   </div>
 
 ---
