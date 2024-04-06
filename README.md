@@ -13,11 +13,12 @@
 - Acesse em: **<https://ignitefeed-aszurar.netlify.app>**
 
   <div align="center">
-    <h3><a href="https://ignitefeed-aszurar.netlify.app">Ignite Feed</a></h3>
+    <h3><a href="https://ignitefeed-aszurar.netlify.app">Ignite Feed</a></h3>   
+
+https://github.com/Aszurar/igniteFeed/assets/64987824/c064848d-bc07-45a6-8ea3-8521eee4c7a9
+
   </div>
-  <div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/8ehNeoepYNE?si=cqcmkb9j66eJVBcq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+
 
 <div align="center">
 
@@ -46,7 +47,7 @@
 
 <div align="center" >
 
-**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=8ehNeoepYNE)**
+**[Vídeo no Youtube](https://www.youtube.com/watch?v=8ehNeoepYNE)**
 
 </div>
 
