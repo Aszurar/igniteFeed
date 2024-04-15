@@ -7,6 +7,8 @@
 ## Ignite Feed
 
 - O projeto **Ignite Feed** é um site de uma página para listar posts de um blog, criar e excluir comentários desses posts, um projeto simples sem muitas funcionalidades para praticar conceitos básicos.
+- O propósito aqui é aprender/praticar conceitos básicos de **React e seus estados** com **TypeScript** e estilizando via **CSS modules**.
+
 - A acessibilidade também foi levada em consideração, com o uso da lib axe-core para testes e correções de acessibilidade assim como leitor de tela ChromeVox.
 
 - O site foi publicado com CI/CD por meio da plataforma **[Netlify](https://www.netlify.com/)**.
